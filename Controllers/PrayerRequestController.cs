@@ -85,7 +85,7 @@ namespace PrayerRequest.Service.Controllers
                 //            .SelectMany(grouping => grouping)
                 //            .Skip(skip)
                 //            .Take(pageSize)
-                //            .ToList();
+                //            .ToList();....
                 var total = dbContext.PrayerRequests.Where(x => x.IsCurrent == isCurrent).Count();                
 
                 return Ok(new PagedResult<PrayerRequestDetail>(result, _defaultPageNo, _defaultPageSize, total));
